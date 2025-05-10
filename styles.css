@@ -1494,5 +1494,207 @@ body.dark-mode .achievement-card {
     width: 100%;
     height: 250px;
 }
+/* Добавьте это в конец вашего CSS файла */
 
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px; /* Уменьшаем базовый размер шрифта */
+    }
+    
+    body {
+        background-image: none; /* Убираем фоновое изображение на мобильных */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .app-container {
+        margin: 0;
+        padding: 1rem;
+        border-radius: 0;
+        min-height: 100vh;
+        box-shadow: none;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 0;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+    
+    .theme-points-container {
+        margin: 0.5rem 0 0 0;
+        width: auto;
+        justify-content: space-between;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .task-section, .calendar-section {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .calendar-section {
+        min-width: auto;
+    }
+    
+    .input-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #task-input, #category-select, #deadline-input {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .add-btn {
+        width: 100%;
+        height: 48px;
+    }
+    
+    .filters {
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+    
+    .filter-btn {
+        flex: 1 1 45%;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .task-item {
+        padding: 0.75rem;
+    }
+    
+    .task-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .task-deadline {
+        font-size: 0.7rem;
+    }
+    
+    .quote-container {
+        padding: 1rem;
+    }
+    
+    .quote-text {
+        font-size: 1rem;
+    }
+    
+    .calendar-header h3 {
+        font-size: 1rem;
+    }
+    
+    .calendar-day {
+        font-size: 0.7rem;
+    }
+    
+    .data-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .data-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .select-all {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #delete-selected-tasks {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .category-stats, .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-row {
+        flex-direction: column;
+    }
+    
+    .chart-block {
+        min-width: 100%;
+    }
+    
+    /* Специфические адаптации для элементов */
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+    
+    .points-display {
+        transform: scale(1); /* Возвращаем нормальный размер */
+        margin: 0;
+    }
+    
+    .task-actions {
+        margin-left: 0;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    .task-add-subtask, .task-delete {
+        opacity: 1; /* Всегда показываем кнопки на мобильных */
+    }
+    
+    .subtasks {
+        padding-left: 1rem;
+    }
+    
+    .deadline-notifications {
+        max-height: 150px;
+    }
+}
+
+/* Дополнительные адаптации для очень маленьких экранов */
+@media (max-width: 480px) {
+    :root {
+        font-size: 12px;
+    }
+    
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .filter-btn {
+        flex: 1 1 100%;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .task-main {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .task-actions {
+        justify-content: space-between;
+    }
+}
 
