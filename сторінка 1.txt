@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Planner</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="header-left">
+                <h1>
+                    <span class="material-icons">rocket</span>
+                    Productivity Planner
+                </h1>
+                <div class="date" id="current-date"></div>
+            </div>
+            <div class="points-display">
+                <span class="material-icons">military_tech</span>
+                <span id="points-count">0</span> баллов
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="task-section">
+                <div class="quote-container" id="daily-quote">
+                    <span class="material-icons">format_quote</span>
+                    <p class="quote-text">Начните делать всё, что вы можете сделать – и даже то, о чём можете хотя бы мечтать. В смелости есть гений, сила и магия.</p>
+                    <p class="quote-author">— Иоганн Вольфганг Гёте</p>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Прогресс дня</span>
+                        <span id="progress-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="task-input" placeholder="Добавить новую задачу...">
+                    <select id="category-select">
+                        <option value="work">Работа</option>
+                        <option value="study">Учёба</option>
+                        <option value="health">Здоровье</option>
+                        <option value="personal">Личное</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <input type="date" id="deadline-input">
+                    <button id="add-task-btn" class="add-btn">
+                        <span class="material-icons">add</span>
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="active">Активные</button>
+                    <button class="filter-btn" data-filter="completed">Завершённые</button>
+                </div>
+
+                <ul class="task-list" id="task-list">
+                    <!-- Tasks will be added here -->
+                </ul>
+            </div>
+
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month" class="nav-btn">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <h3 id="current-month"></h3>
+                    <button id="next-month" class="nav-btn">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Пн</div>
+                    <div>Вт</div>
+                    <div>Ср</div>
+                    <div>Чт</div>
+                    <div>Пт</div>
+                    <div>Сб</div>
+                    <div>Вс</div>
+                </div>
+                <div class="calendar-days" id="calendar-days">
+                    <!-- Calendar days will be generated here -->
+                </div>
+                <div class="categories-legend">
+                    <h4>Категории:</h4>
+                    <div class="legend-item work">Работа</div>
+                    <div class="legend-item study">Учёба</div>
+                    <div class="legend-item health">Здоровье</div>
+                    <div class="legend-item personal">Личное</div>
+                    <div class="legend-item other">Другое</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        <span class="material-icons">notifications</span>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

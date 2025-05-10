@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Planner</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+
+<div class="header">
+    <div class="header-left">
+        <h1>
+            <span class="material-icons">rocket</span>
+            Productivity Planner
+        </h1>
+        <div class="date" id="current-date"></div>
+    </div>
+
+    <!-- Переміщений блок з балами в праву частину заголовка -->
+    <div class="header-right">
+        <div class="theme-points-container">
+            <div class="points-display">
+                <span class="material-icons">military_tech</span>
+                <span id="points-count">0</span>
+                <button id="reset-points-btn" title="Обнулити бали">
+                    <span class="material-icons">replay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="main-content">
+            <div class="task-section">
+                <div class="quote-container" id="daily-quote">
+                    <span class="material-icons">format_quote</span>
+                    <p class="quote-text">Начните делать всё, что вы можете сделать – и даже то, о чём можете хотя бы мечтать. В смелости есть гений, сила и магия.</p>
+                    <p class="quote-author">— Иоганн Вольфганг Гёте</p>
+
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span>Прогрес дня</span>
+                        <span id="progress-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="deadline-notifications" id="deadline-notifications">
+                    <span class="material-icons">alarm</span>
+                    </div>
+
+                </div>
+
+
+                <div class="input-container">
+                    <input type="text" id="task-input" placeholder="Додати нову задачу...">
+                    <select id="category-select">
+                        <option value="work">Робота</option>
+                        <option value="study">Навчання</option>
+                        <option value="health">Здоров'я</option>
+                        <option value="personal">Особисте</option>
+                        <option value="other">Інше</option>
+                    </select>
+                    <input type="date" id="deadline-input">
+                    <button id="add-task-btn" class="add-btn">
+                        <span class="material-icons">add</span>
+                    </button>
+
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Всі</button>
+                    <button class="filter-btn" data-filter="active">Активні</button>
+                    <button class="filter-btn" data-filter="completed">Завершені</button>
+                </div>
+                <div class="drag-hint">
+                        <span class="material-icons">drag_handle</span>
+                        <span>Перетягуйте задачі для зміни порядку</span>
+                    </div>
+                    <div class="select-all">
+                    <input type="checkbox" id="select-all-tasks">
+                    <label for="select-all-tasks">Вибрати все</label>
+                    </div>
+
+                <ul class="task-list" id="task-list">
+                    </ul>
+
+                <div class="select-all">
+
+                    <button id="delete-selected-tasks" class="delete-selected">
+                        <span class="material-icons">delete_sweep</span> Видалити вибрані
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month" class="nav-btn">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <h3 id="current-month"></h3>
+                    <button id="next-month" class="nav-btn">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Пн</div>
+                    <div>Вт</div>
+                    <div>Ср</div>
+                    <div>Чт</div>
+                    <div>Пт</div>
+                    <div>Сб</div>
+                    <div>Нд</div>
+                </div>
+                <div class="calendar-days" id="calendar-days">
+                    </div>
+                <div class="categories-legend">
+                    <h4>Категорії:</h4>
+                    <div class="legend-item work">Робота</div>
+                    <div class="legend-item study">Навчання</div>
+                    <div class="legend-item health">Здоров'я</div>
+                    <div class="legend-item personal">Особисте</div>
+                    <div class="legend-item other">Інше</div>
+                    <a href="achievements.html" class="achievements">
+                    <span class="material-icons">emoji_events</span>Досягнення та статистика</a>
+					
+                </div>
+
+            </div>
+
+        </div>
+
+
+</div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

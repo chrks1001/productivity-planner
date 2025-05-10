@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Досягнення та статистика</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>
+                <span class="material-icons">emoji_events</span>
+                Досягнення та статистика
+            </h1>
+            <a href="сторінка 1.html" class="back-btn">
+                <span class="material-icons">arrow_back</span>
+                На головну
+            </a>
+        </div>
+
+        <div class="stats-container">
+            <!-- Статистика за категоріями -->
+            <div class="stats-section">
+                <h2><span class="material-icons">bar_chart</span> Статистика за категоріями</h2>
+                <div class="category-stats" id="category-stats">
+                    <!-- Дані будуть додані через JS -->
+                </div>
+            </div>
+
+            <!-- Графіки продуктивності -->
+<div class="stats-section">
+    <h2><span class="material-icons">timeline</span> Продуктивність</h2>
+    <div class="chart-row">
+        <div class="chart-block">
+            <h3>За тиждень</h3>
+            <canvas id="weekly-chart"></canvas>
+        </div>
+        <div class="chart-block">
+            <h3>За місяць</h3>
+            <canvas id="monthly-chart"></canvas>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Досягнення -->
+            <div class="stats-section">
+                <h2><span class="material-icons">military_tech</span> Досягнення</h2>
+                <div class="achievements-grid" id="achievements-grid">
+                    <!-- Дані будуть додані через JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>
